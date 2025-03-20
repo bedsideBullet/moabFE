@@ -187,7 +187,7 @@ const RegistrationForm: React.FC = () => {
 					alignItems: "center",
 					justifyContent: "center",
 					width: "100vw",
-					minHeight: "100vh",
+					minHeight: "1000px",
 					overflow: { xs: "auto", sm: "none" },
 					paddingTop: { xs: "115px", sm: "0px" },
 					paddingBottom: "0px",
