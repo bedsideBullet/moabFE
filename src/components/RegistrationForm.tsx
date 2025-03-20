@@ -185,31 +185,43 @@ const RegistrationForm: React.FC = () => {
 					alignItems: "center",
 					justifyContent: "center",
 					width: "100vw",
-					height: "100vh",
+					minHeight: "100vh",
 					overflow: "auto",
+					paddingTop: { xs: "120px", sm: "100px" },
+					paddingBottom: "20px",
+					boxSizing: "border-box",
 				}}
 			>
 				<Container
 					component="main"
 					maxWidth="sm"
+					className="registration-form"
 					sx={{
 						position: "relative",
 						display: "flex",
 						flexDirection: "column",
 						alignItems: "center",
-						bgcolor: "rgba(255, 255, 255, 0.8)",
-						padding: "32px",
+						bgcolor: "rgba(255, 255, 255, 0.9)",
+						padding: "20px",
 						borderRadius: 2,
+						boxShadow: 3,
 						zIndex: 1,
-						mt: 10,
+						mt: { xs: 0, sm: 5 },
 					}}
 				>
 					<Typography component="h1" variant="h3">
 						Contest Registration
 					</Typography>
-					<Typography component="p" variant="subtitle1">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore id
-						ab vel esse sit quae voluptatum perferendis nemo debitis fugit.
+					<Typography
+						component="p"
+						variant="subtitle1"
+						sx={{
+							textAlign: "center",
+							width: "100%",
+						}}
+					>
+						Thank you for entering our contest! You now have a chance to win
+						your choice of either a tow rig or an trail rig. Best of luck!
 					</Typography>
 					{successMessage && <Alert severity="success">{successMessage}</Alert>}
 					{errorMessage && <Alert severity="error">{errorMessage}</Alert>}
@@ -352,11 +364,11 @@ const RegistrationForm: React.FC = () => {
 										onChange={handleCheckboxChange}
 									/>
 								}
-								label="By checking this box, you confirm that you are 18 years or older."
+								label="By checking this box, you confirm that you are 18 years or older and agree to receive communications, including emails, calls, and text messages, from PSC Motorsports. You understand that consent is not a condition of purchase and that you can opt out at any time."
 								sx={{
 									typography: "body2",
 									"& .MuiTypography-root": {
-										fontSize: "0.9rem",
+										fontSize: "0.8rem",
 									},
 								}}
 							/>
