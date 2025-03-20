@@ -148,8 +148,10 @@ const RegistrationForm: React.FC = () => {
 					width: "100%",
 					bgcolor: "black",
 					zIndex: 1100,
-					maxHeight: 100,
+					height: { xs: 75, sm: 100 },
 					left: 0,
+					display: "flex",
+					alignItems: "center",
 				}}
 			>
 				<Box
@@ -167,7 +169,7 @@ const RegistrationForm: React.FC = () => {
 			<Box
 				sx={{
 					position: "fixed",
-					display: "flex",
+					display: "fixed",
 					top: 0,
 					left: 0,
 					width: "100vw",
@@ -186,10 +188,11 @@ const RegistrationForm: React.FC = () => {
 					justifyContent: "center",
 					width: "100vw",
 					minHeight: "100vh",
-					overflow: "auto",
-					paddingTop: { xs: "65px", sm: "0px" },
+					overflow: { xs: "auto", sm: "none" },
+					paddingTop: { xs: "115px", sm: "0px" },
 					paddingBottom: "0px",
 					boxSizing: "border-box",
+					mt: { xs: 10, sm: 0 },
 				}}
 				className={"registration-form-container"}
 			>
@@ -207,11 +210,12 @@ const RegistrationForm: React.FC = () => {
 						borderRadius: 2,
 						boxShadow: 3,
 						zIndex: 1,
-						mt: { xs: 0, sm: 5 },
+						mt: { xs: 2, sm: 10 },
+						mb: { xs: 2, sm: 0 },
 					}}
 				>
-					<Typography component="h1" variant="h3">
-						Contest Registration
+					<Typography component="h1" variant="h3" fontWeight={700}>
+						You Found us!
 					</Typography>
 					<Typography
 						component="p"
@@ -219,10 +223,12 @@ const RegistrationForm: React.FC = () => {
 						sx={{
 							textAlign: "center",
 							width: "100%",
+							lineHeight: 1.2,
 						}}
 					>
-						Thank you for entering our contest! You now have a chance to win
-						your choice of either a tow rig or an trail rig. Best of luck!
+						Congrats on finding us! Register now for a chance to win a
+						high-performance steering system for your tow rig or trail rig, with
+						a retail value of up to $4,500. Good luck!
 					</Typography>
 					{successMessage && <Alert severity="success">{successMessage}</Alert>}
 					{errorMessage && <Alert severity="error">{errorMessage}</Alert>}

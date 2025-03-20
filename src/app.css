@@ -1,10 +1,10 @@
 html,
 body {
-	overflow: hidden; /* Completely disable scrolling */
-	height: 100%;
+	overflow-x: hidden; /* Prevents horizontal scrolling but allows vertical scrolling */
+	height: auto; /* Allows the body to grow if needed */
 }
 
 .registration-form-container {
-	overflow: none; /* Completely disable scrolling */
-	height: 100%;
+	overflow: auto; /* Enables scrolling when content overflows */
+	height: 100vh; /* Ensures the container fills the screen */
 }
