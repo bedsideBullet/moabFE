@@ -47,12 +47,14 @@ const RegistrationDetail: React.FC = () => {
 
 	const navigate = useNavigate();
 
-	const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
+	const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 	useEffect(() => {
 		const fetchRegistration = async () => {
 			try {
-				const response = await axios.get(`${API_BASE_URL}/registration/${id}`);
+				const response = await axios.get(
+					`${API_BASE_URL}/api/registration/${id}`
+				);
 				setRegistration(response.data);
 			} catch (err) {
 				setError("Failed to fetch registration details");

@@ -65,19 +65,17 @@ const AdminDash: React.FC = () => {
 		Registration[]
 	>([]);
 
-	const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
+	const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-	const correctUsername =
-		import.meta.env.VITE_ADMIN_USERNAME || "defaultUsername";
-	const correctPassword =
-		import.meta.env.VITE_ADMIN_PASSWORD || "defaultPassword";
+	const correctUsername = import.meta.env.VITE_ADMIN_USERNAME;
+	const correctPassword = import.meta.env.VITE_ADMIN_PASSWORD;
 
 	useEffect(() => {
 		if (!authDialogOpen) {
 			const fetchRegistrations = async () => {
 				try {
 					const response = await axios.get(
-						`${API_BASE_URL}/registration/registrations`
+						`${API_BASE_URL}/api/registration/registrations`
 					);
 					setRegistrations(response.data);
 					setFilteredRegistrations(response.data);
