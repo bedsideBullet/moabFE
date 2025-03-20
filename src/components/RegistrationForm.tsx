@@ -187,10 +187,11 @@ const RegistrationForm: React.FC = () => {
 					width: "100vw",
 					minHeight: "100vh",
 					overflow: "auto",
-					paddingTop: { xs: "120px", sm: "100px" },
-					paddingBottom: "20px",
+					paddingTop: { xs: "65px", sm: "0px" },
+					paddingBottom: "0px",
 					boxSizing: "border-box",
 				}}
+				className={"registration-form-container"}
 			>
 				<Container
 					component="main"
