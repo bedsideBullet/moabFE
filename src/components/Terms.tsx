@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Box, Typography } from "@mui/material";
 
-const RegistrationForm: React.FC = () => {
+const Terms: React.FC = () => {
 	return (
 		<>
 			<Container
@@ -34,7 +34,6 @@ const RegistrationForm: React.FC = () => {
 			<Box
 				sx={{
 					position: "fixed",
-					display: "fixed",
 					top: 0,
 					left: 0,
 					width: "100vw",
@@ -222,4 +221,4 @@ const RegistrationForm: React.FC = () => {
 	);
 };
 
-export default RegistrationForm;
+export default Terms;
