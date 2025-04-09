@@ -228,7 +228,9 @@ const RegistrationForm: React.FC = () => {
 					>
 						Congrats on finding us! Register now for a chance to win a
 						high-performance steering system for your tow rig or trail rig, with
-						a retail value of up to $4,500. Good luck!
+						a retail value of up to $4,500. Registration closes at 11:59 PM
+						Mountain Time on April 17th, and the drawing will be held at 10:00
+						AM Mountain Time on April 18th. Good luck!
 					</Typography>
 					{successMessage && <Alert severity="success">{successMessage}</Alert>}
 					{errorMessage && <Alert severity="error">{errorMessage}</Alert>}
@@ -371,12 +373,22 @@ const RegistrationForm: React.FC = () => {
 										onChange={handleCheckboxChange}
 									/>
 								}
-								label="By checking this box, you confirm that you are 18 years or older and agree to receive communications, including emails, calls, and text messages, from PSC Motorsports. You understand that consent is not a condition of purchase and that you can opt out at any time."
+								label={
+									<span style={{ fontSize: "0.8rem" }}>
+										By checking this box, you confirm that you are 18 years of
+										age or older and agree to receive communications from PSC
+										Motorsports. You understand that consent is not a condition
+										of purchase and that you may opt out at any time. You also
+										acknowledge that you have read and agree to the Official{" "}
+										{""}
+										<a href="/terms" target="_blank" rel="noopener noreferrer">
+											Terms & Conditions
+										</a>
+										.
+									</span>
+								}
 								sx={{
 									typography: "body2",
-									"& .MuiTypography-root": {
-										fontSize: "0.8rem",
-									},
 								}}
 							/>
 						</FormGroup>
